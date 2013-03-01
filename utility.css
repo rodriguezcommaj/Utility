@@ -1,0 +1,58 @@
+/* 	
+	==============================================
+
+	Utility 
+
+	by Jason Rodriguez - http://rodriguezcommaj.com
+
+	A collection of utility and helper classes to 
+	make any project a little easier.
+
+	==============================================
+*/
+
+/* Get the box model to work how it should */
+/* Credited to Paul Irish */
+* 		{ -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Responsive images FTW */
+img 	{ max-width:100%; height:auto; }
+
+/* I hate default link styling, don't you? */
+a 			{ color:#444; text-decoration:none; }
+a:hover 	{ color:#222; text-decoration:underline; }
+
+/* Easily float elements - set widths on the elements themselves */
+.float-left 	{ float:left; }
+.float-right 	{ float:right; }
+.clear 			{ clear:both; }
+
+/* Quick text alignment */
+.text-left 		{ text-align:left; }
+.text-center 	{ text-align:center; }
+.text-right 	{ text-align:right; }
+
+/* Responsive utilities - show and hide on device size */
+/* Credited to Twitter Bootstrap & Foundation by Zurb */
+
+/* Desktop */
+.show-on-phone 		{ display:none !important; }
+.show-on-tablet 	{ display:none !important; }
+.hide-on-desktop 	{ display:none !important; }
+.show-on-desktop 	{ display:inherit !important; }
+
+/* Tablets & Small Monitors */
+@media all and (min-width:768px) and (max-width:979px) {
+	.hide-on-desktop 	{ display:inherit !important; }
+	.show-on-desktop 	{ display:none !important; }
+	.show-on-tablet 	{ display:inherit !important; }
+	.hide-on-tablet 	{ display:none !important; }
+}
+
+/* Phones, Baby */
+@media all and (max-width:767px) {
+	.hide-on-desktop 	{ display:inherit !important; }
+	.show-on-desktop 	{ display:none !important; }
+	.show-on-phone 		{ display:inherit !important; }
+	.hide-on-phone 		{ display:none !important; }
+}
